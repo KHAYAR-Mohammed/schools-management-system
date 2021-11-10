@@ -6,7 +6,7 @@ const InitialAuthData = {
     loggedIn:false
 };
 
-const reducer = (state: AuthDataType = InitialAuthData, action: AuthAction): AuthDataType => {
+const authReducer = (state: AuthDataType = InitialAuthData, action: AuthAction): AuthDataType => {
     switch (action.type){
         case AuthActionType.LOGIN:
             return LogIn(action.payload); // Login Logic
@@ -20,4 +20,4 @@ const reducer = (state: AuthDataType = InitialAuthData, action: AuthAction): Aut
 
 
 
-export default reducer;
+export default authReducer;
