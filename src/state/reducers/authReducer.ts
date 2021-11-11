@@ -1,6 +1,6 @@
 import { AuthActionType,AuthDataType,LoginDataType } from "../action-types/index"
 import { AuthAction } from "../actions"
-import { LogIn , LogOut } from "../../controllers"
+import { LogIn , LogOut , SignUp} from "../../controllers"
 
 const InitialAuthData = {
     loggedIn:false
@@ -12,6 +12,8 @@ const authReducer = (state: AuthDataType = InitialAuthData, action: AuthAction):
             return LogIn(action.payload); // Login Logic
         case AuthActionType.LOGOUT:
             return LogOut(action.payload); // Logout Logic
+        case AuthActionType.SIGNUP:
+            return SignUp(action.payload); // Logout Logic
         default:
             return state;
     }
@@ -21,3 +23,4 @@ const authReducer = (state: AuthDataType = InitialAuthData, action: AuthAction):
 
 
 export default authReducer;
+

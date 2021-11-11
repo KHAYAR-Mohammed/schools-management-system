@@ -1,5 +1,5 @@
 
-import { AuthActionType,AuthDataType,LoginDataType } from "../action-types/index"
+import { AuthActionType,AuthDataType,LoginDataType,UserDataType } from "../action-types/index"
 
 interface LoginActionInterface {
     type: AuthActionType.LOGIN,
@@ -11,5 +11,9 @@ interface LogoutActionInterface {
     payload: AuthDataType
 }
 
+interface SignUpActionInterface {
+    type: AuthActionType.SIGNUP,
+    payload: UserDataType
+}
 
-export type AuthAction = LoginActionInterface | LogoutActionInterface;
+export type AuthAction = LoginActionInterface | LogoutActionInterface | SignUpActionInterface;

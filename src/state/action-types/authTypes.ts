@@ -27,7 +27,8 @@ interface LoginDataInterface{
 
 export  enum AuthActionType{
     LOGIN ="login",
-    LOGOUT="logout"    
+    LOGOUT="logout",
+    SIGNUP="sigup"    
 };
 
 export type UserDataType=UserDataInterface;
