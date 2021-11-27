@@ -23,6 +23,7 @@ interface AuthDataInterface{
         - Parameter of LogIn function  
 */ 
 interface SignupDataInterface{
+    userProfilePicture:string, // Base64 Image
     username:string,
     password:string,
     firstName:string,
