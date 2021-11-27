@@ -1,3 +1,5 @@
+import internal from "stream";
+
 /* UserDataInterface */
 interface UserDataInterface {
     username:string
@@ -20,9 +22,28 @@ interface AuthDataInterface{
     *authController
         - Parameter of LogIn function  
 */ 
+interface SignupDataInterface{
+    username:string,
+    password:string,
+    firstName:string,
+    lastname:string,
+    email:string,
+    birthday:Date,
+    adresseLine1:string,
+    adresseLine2:string,
+    city:string,
+    country:string
+};
+
+/* SignupDataInterface
+    Used As : 
+    *authController
+        - Parameter of Signup function  
+*/ 
 interface LoginDataInterface{
     login:string,
-    password:string
+    password:string,
+    varification?:string
 };
 
 export  enum AuthActionType{
@@ -34,4 +55,5 @@ export  enum AuthActionType{
 export type UserDataType=UserDataInterface;
 export type AuthDataType=AuthDataInterface;
 export type LoginDataType=LoginDataInterface;
+export type SignupDataType=SignupDataInterface;
 
